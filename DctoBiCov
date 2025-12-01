@@ -2,3 +2,15 @@
 
 import tkinter as tk
 from tkinter import messagebox
+
+def convert_to_binary():
+  try:
+      # It gets the decimal number from the input box.
+      decimal_number = int(entry.get())
+      # This converts it to binary
+      binary_number = bin(decimal_number).replace("0b", "")
+      #Shows the result in the output label
+      result_label.config(text=f"Binary: {binary_number}")
+  except ValueError:
+        #This is gonna show a error box if the input is invalid
+        messagebox.showerror("Invalid Input", "Please enter a valid integer.")
